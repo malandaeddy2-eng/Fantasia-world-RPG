@@ -1,0 +1,18 @@
+FANTASIA WORLD — fabriquer l'APK (jeu hors ligne)
+
+Je n'ai pas pu compiler l'APK moi-même (pas d'outils Android ni d'internet dans mon environnement).
+Ce dossier contient tout ce qu'il faut : un service gratuit (GitHub) fabrique l'APK à ta place.
+
+ÉTAPES (une seule fois, ~10 min, faisable sur ordinateur ou navigateur du téléphone)
+1. Crée un compte gratuit sur github.com puis un nouveau dépôt « monde-ouvert-rpg » (Public ou Privé).
+2. Dans le dépôt : Add file > Upload files, puis envoie : package.json, capacitor.config.json
+   et le dossier www (avec index.html dedans). Valide (Commit).
+3. Add file > Create new file. Dans le nom, tape exactement :  .github/workflows/build.yml
+   Copie-colle dedans tout le contenu du fichier build.yml de ce dossier. Valide (Commit).
+4. Onglet « Actions » > « Construire l'APK » > Run workflow. Attends 5 à 10 minutes (coche verte).
+5. Ouvre l'exécution terminée > section « Artifacts » > télécharge « Monde-Ouvert-RPG-APK » (un .zip).
+   Dézippe-le : tu obtiens app-debug.apk.
+6. Sur le téléphone, ouvre l'APK, autorise « Installer des applications inconnues » si demandé, installe.
+
+Le jeu fonctionne ensuite hors ligne : la bibliothèque 3D (three.js) est intégrée à l'APK
+et ta sauvegarde est conservée dans l'application.
